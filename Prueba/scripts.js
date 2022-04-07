@@ -16,7 +16,7 @@ const character = document.getElementById('character-box');
             let blockleft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
             let characterbottom = parseInt(window.getComputedStyle(character).getPropertyValue('bottom'));
             if (blockleft > 50 && blockleft < 300 && characterbottom <= 150) {
-                alert('Game Over');
+                alert('Try Again!');
 
             }
 
