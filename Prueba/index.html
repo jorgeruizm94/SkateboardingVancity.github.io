@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +15,15 @@
 </head>
 
 <body>
+
+    <div class="title">
+    <div class="titulo">Skateboard Vancity</div>
+</div>
+<div class="skategame">
     <div id="container">
         <div id="scoreBox"> <span> Score : </span> <span id='score'>0</span></div>
+        <div id="sky"></div>
+        <div id="wall"></div>
         <div id="character-box">
             <div id="character"></div>
         </div>
@@ -20,9 +31,12 @@
         <div id="road"></div>
         <script src="scripts.js"></script>
     </div>
+</div>
+   <div class="boton">
 
-   
-    
+ 
+<input  type="button" value="try again   " onclick="RefreshPage()"    >
+</div>
 </body>
 
 </html>

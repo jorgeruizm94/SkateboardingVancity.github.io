@@ -5,27 +5,32 @@ const characterBox = document.getElementById('character-box');
 
 
         let gameover = new Audio('gameover.wav');
-        let music = new Audio('Battles.mp3');
+        let music = new Audio('Battles.wav');
         let jumpMusic=new Audio('jump.wav');
 
         let score = document.getElementById('score');
         let scoreIncrease = 0;
 
-        music.loop = true;
-        music.play();
         music.volume=0.5;
+        music.play();
+        music.loop = true;
+        
+        
 
         document.addEventListener('click', jump);
         function jump() {
             if (characterBox.classList == 'jump') {
                 return;
             }
+            
             characterBox.classList.add('jump');
+            jumpMusic.volume=0.2;
             jumpMusic.play();
            
             setTimeout(() => {
                 characterBox.classList.remove('jump');
                 jumpMusic.paused();
+                
                 jumpMusic.currentTime=0;
               
               
@@ -39,7 +44,7 @@ const characterBox = document.getElementById('character-box');
             let blockleft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
             let characterbottom = parseInt(window.getComputedStyle(characterBox).getPropertyValue('bottom'));
 
-            if (blockleft > 30 && blockleft < 336 && characterbottom <= 150) {
+            if (blockleft > 30 && blockleft < 300 && characterbottom <= 80) {
 
                 music.pause();
                 block.style.animationPlayState = 'paused';
@@ -49,8 +54,11 @@ const characterBox = document.getElementById('character-box');
 
 
                 if (flag == 1) {
+                    gameover.volume=0.2;
                     gameover.play();
+                    
                     flag++;
+                    
                 }
 
 
@@ -68,3 +76,7 @@ const characterBox = document.getElementById('character-box');
             check();
 
         }, 10);
+
+        function RefreshPage() {
+            location.reload();
+        }
