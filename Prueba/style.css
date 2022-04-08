@@ -19,6 +19,36 @@ body {
     overflow: hidden;
 }
 
+#scoreBox {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px 0px;
+    color: black;
+    font-weight: bold;
+
+
+
+
+}
+
+#score {
+    width: 150px;
+    text-align: left;
+    margin-left: 5px;
+    font-size: 25px;
+    margin-top: 10px;
+
+
+}
+
+span {
+    z-index: 3;
+}
+
 #character-box {
     height: 256px;
     width: 256px;
@@ -37,7 +67,7 @@ body {
 
 #block {
     height: 80px;
-    width: 80px;
+    width: 70px;
     background: url(Hydrant.png);
     position: absolute;
     bottom: 50px;
@@ -54,7 +84,7 @@ body {
 }
 
 .jump {
-    animation: character-box-jump .5s linear;
+    animation: character-box-jump .7s linear;
 }
 
 @keyframes character-animate {
@@ -96,12 +126,12 @@ body {
 
 @keyframes block-animate {
     0% {
-        left: 1200px;
+        left: 1300px;
 
     }
 
     100% {
-        left: -100px;
+        left: -200px;
 
     }
 
